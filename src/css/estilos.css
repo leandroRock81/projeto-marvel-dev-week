@@ -59,10 +59,10 @@ main {
 
 .selecao .personagem-grande .nome::before {
     content: '';
-    height: 15px;
+    height: 30px;
     width: 100%;
     position: absolute;
-    bottom: -15px;
+    bottom: -5px;
     left: 0;
 }
 
@@ -109,7 +109,7 @@ main {
     border-radius: 5px;
 }
 
-.selecao .lista-personagens .personagem-grande.personagem-jogador-1-selecionado{
+.selecao .lista-personagens .personagem.selecionado{
     border: 2px solid var(--cor-azul-media);
     animation: c-glowing-blue .3s ease-in-out infinite;
     animation-direction: alternate;
@@ -117,13 +117,42 @@ main {
 
 .selecao .lista-personagens .personagem:hover {
     animation: c-glowing-blue .3s ease-in-out infinite;
-    animation: alternate;
-    transform: scale(1.21);
+    animation-direction: alternate;
+    transform: scale(1.09);
     z-index: 2;
 }
 
-.selecao .lista-personagens .personagem-grande.personagem-jogador-2 per {
-    border: 2px solid var(--cor-azul-media);
+.selecao .lista-personagens .personagem.jogador-2-selecionado {
+    border: 2px solid var(--cor-vermelha-fraca);
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao .lista-personagens .personagem-.personagem-jogador-2-selecionado:hover {
     animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao .lista-personagens .personagem .tag {
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--cor-azul-media);
+    transition: opacity .3s ease-in-out;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao .lista-personagens .personagem.selecionado .tag {
+    display: block;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao .lista-personagens .personagem.personagem.jogador-2-selecionado .tag {
+    display: block;
+    animation: text-glowing-red .3s ease-in-out infinite;
     animation-direction: alternate;
 }
